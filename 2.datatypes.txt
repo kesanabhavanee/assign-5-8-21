@@ -1,0 +1,25 @@
+2)Program to explain all data types including signed and unsigned.
+
+#include <stdio.h>
+#include <limits.h>
+#include <float.h>
+int main()
+{
+    int a=1;float b=4;
+    double d=45.785;char c='b';unsigned int x=5;
+    printf("Size of int=%lu bytes\n",sizeof(a));//4
+    printf("Size of char=%lu bytes\n",sizeof(c));//1
+    printf("Size of double=%lu bytes\n",sizeof(d));//8
+    printf("Size of float=%lu bytes\n",sizeof(b));//4
+    printf("size of integer %d\n" , sizeof(a)); //4
+    printf("max float value allowed in positive range:%g\n", (float) FLT_MAX);//3.40282e+38
+    printf("max float value allowed in negative range:%g\n", (float) -FLT_MAX);//-3.40282e+38
+    printf("max double value possible in positive range:%g\n", (double) DBL_MAX);//1.79769e+308
+    printf("max double value possible in negative range:%g\n", (double) -DBL_MAX);//-1.79769e+308
+    printf("size of long double %d\n" , sizeof(long double)); //16
+    printf("size of short integer %d\n" , sizeof(short int)); //2
+    printf("size of long integer %d\n" , sizeof(long int)); //8
+    printf("size of unsigned integer %d\n" , sizeof(x));//4 
+    printf("size of signed integer %d\n" , sizeof(signed int));//4
+return 0;
+}

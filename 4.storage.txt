@@ -1,0 +1,92 @@
+4) Program to explain all storage classes scope
+
+Auto 
+
+#include<stdio.h>
+int main()
+{
+    auto int a=10;
+    {
+        auto int a;                  //block scope
+        printf("a: %d\n",a);         // garbage value
+    }
+    printf("a: %d\n",a);
+}
+output:a:0
+a:10
+
+
+Register
+#include<stdio.h>
+int main()
+{
+register int i;
+for(i=1;i<=10;i++)
+printf(“%d” , i);
+return 0;
+}
+o/p: 1 2 3 4 5 6 7 8 9 10
+
+
+Static
+
+#include<stdio.h>
+int fun()
+{
+static int count=0;
+count++;
+return count;
+}
+int main()
+{
+printf(“ %d” , fun());
+printf(“%d”, fun());
+return 0;
+}
+
+
+Extern
+
+First file : main.c
+#include<stdio.h>
+extern i;
+main()
+{
+printf(“value of the external integer is = %d\n” , i);
+return 0;
+}
+Second file : new.c
+#include<stdio.h>
+i = 53;
+o/p : value of the external integer is = 53
+
+Global
+
+#include<stdio.h>
+void func_1();
+void func_2();
+int a, b = 10;  // declaring and initializing global variables
+
+int main()
+{
+    printf("Global a = %d\n", a);
+    printf("Global b = %d\n\n", b);
+
+    func_1();
+    func_2();
+
+    // signal to operating system program ran fine
+    return 0;
+}
+
+void func_1()
+{
+    printf("From func_1() Global a = %d\n", a);
+    printf("From func_1() Global b = %d\n\n", b);
+}
+
+void func_2()
+{
+    int a = 5;
+    printf("Inside func_2() a = %d\n", a);
+}

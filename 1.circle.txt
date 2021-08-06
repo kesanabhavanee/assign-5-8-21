@@ -1,0 +1,27 @@
+1)Progam to calculate area and circumference of circle.
+
+#include <stdio.h>
+#define PI 3.14159
+int main()
+{
+   int r;
+   float area,cir;
+   scanf("%d",&r);
+   area=PI*r*r;
+   cir=2*PI*r;
+   printf("area of circle is %f",area);
+   printf("circumference of circle is %f",cir);
+
+   return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

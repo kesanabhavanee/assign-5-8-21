@@ -1,0 +1,69 @@
+3)Program to explain all operators using different data types.
+
+#include <stdio.h>
+int main()
+{
+    int a = 5, b = 3;
+    float c = 6.5, d = 1.2;
+//Arithmetic operators
+     printf("%d\n",a+b);
+     printf("%d \n",a-b);
+     printf("%d \n",a/b);
+     printf("%d \n",a*b);
+     printf("%d \n",a%b);
+//Increment and Decrement operators
+   
+    printf("++a = %d \n", ++a);
+    printf("--b = %d \n", --b);
+    printf("++c = %f \n", ++c);
+    printf("--d = %f \n", --d);
+
+//Relational 
+    
+    printf(" %d \n", a == b);
+    printf(" %d \n",  a > b);
+    printf(" %d \n",  a < b);
+    printf(" %d \n",  a != b);
+    printf(" %d \n", a >= b);
+    printf(" %d \n",  a <= b);
+    
+//sizeof
+    
+    printf("Size of int=%lu bytes\n",sizeof(a));
+    printf("Size of float=%lu bytes\n",sizeof(c));
+   
+//Logical
+    
+    printf("%d \n",a&&b);
+    printf("%d \n",a||b);
+    printf("%d \n",!a);
+    
+//Assignment operators
+    
+    printf("%d \n",a+=b);
+    printf("%d \n",a-=b);
+    printf("%d \n",a*=b);
+
+//Bitwise operators(&, |, ^, <<, >>)
+    printf(“%d\n”, a&b); //2
+    printf(“%d\n”, a|b); //2
+    printf(“%d\n”, a^b); //0
+    printf(“%d\n”, a<<b); //8
+    printf(“%d\n”, a>>b); //0
+
+//conditional
+    #include <stdio.h>
+ 
+int main()
+{
+   int x=1, y ;
+   y = ( x ==1 ? 2 : 0 ) ;
+   printf("x value is %d\n", x);
+   printf("y value is %d", y);
+}
+output
+x value 1s 1
+y value is 2
+
+    return 0;
+}
